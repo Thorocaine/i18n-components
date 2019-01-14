@@ -12,7 +12,7 @@ function useTranslation(args: any[], index: string) {
     const i18n = useContext(i18nContext);
     const [translation, setTranslation] = useState('');
     useEffect(() => {
-        const template = translations[i18n][index] ||  indexNotFound(index);
+        const template = translations[i18n][index] || translations[i18n.split('-')[0]][index] ||  indexNotFound(index);
         const text = args.reduce((all, val, i) => all.split(`\$\{${i}\}`).join(val), template);
         setTranslation(text);
     }, [args, index]);
