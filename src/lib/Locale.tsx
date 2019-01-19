@@ -1,7 +1,7 @@
-import { createContext, memo } from "react";
+import { createContext } from 'react';
 
 const localeContext = createContext<string>('');
 const Locale = localeContext.Provider;
 
-export default memo(Locale);
+export default Locale;
 export { localeContext };
