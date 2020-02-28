@@ -1,8 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import i18n from "./lib/i18n";
-import Internationalization from "./lib/Internationalization";
-import Locale from "./lib/Locale";
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import i18n from './iold';
+import Internationalization from './lib/Internationalization';
+import Locale from './lib/Locale';
 
 const config = {
     'en' : { 

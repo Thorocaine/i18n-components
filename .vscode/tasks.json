@@ -6,13 +6,25 @@
     {
       "type": "npm",
       "script": "start",
-      "problemMatcher": ["$tsc-watch"],
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
       "isBackground": true
     },
     {
       "type": "npm",
       "script": "test",
-      "problemMatcher": ["$jasmine"]
+      "problemMatcher": [
+        "$jasmine"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "storybook",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "isBackground": true
     }
   ]
 }
