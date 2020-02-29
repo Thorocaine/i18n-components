@@ -1,9 +1,9 @@
 {
 	"name": "i18n-components",
-	"version": "1.0.0",
+	"version": "1.0.6",
 	"description": "I want to try make an easy to use i18n components for react, using tagged template literals.",
-	"main": "index.js",
-	"types": "index.d.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"devDependencies": {
 		"@storybook/react": "^5.3.14",
 		"@testing-library/jest-dom": "^4.2.4",
@@ -19,7 +19,7 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "rimraf dist && tsc",
-		"test": "react-scripts test",
+		"test": "react-scripts test"
 	},
 	"eslintConfig": {
 		"extends": "react-app",
