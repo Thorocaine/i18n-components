@@ -5,17 +5,18 @@ import context from './context';
 function useI18n(strings : TemplateStringsArray, ...args: unknown[]) {
 	const { culture, templates } = useContext(context);
 	const template = useMemo(() => {
-		const currentValue = strings.join('{}');
+		const currentValue = strings.slice(1).reduce((p, c, i) => `${p}{${i}}${c}`, strings[0]);
 		const currentTemplate = templates[currentValue] ?? currentValue;
-		const currentLang = currentTemplate[culture] ?? currentValue;
-		return currentLang;
-	}, [strings, culture, templates])
+		const currentLang: string = currentTemplate[culture] ?? currentValue;
+		const translation = args.reduce((c, p, i) => c.split(`{${i}}`).join(p as string), currentLang);
+		return translation;
+	}, [strings, templates, culture, args])
 
 	return template;
 } 
 
 const Comp = ({strings, args}: {strings : TemplateStringsArray, args: unknown[]}) => {  
-	const text = useI18n(strings, args);
+	const text = useI18n(strings, ...args);
 	return <>{text}</>;
 }
 

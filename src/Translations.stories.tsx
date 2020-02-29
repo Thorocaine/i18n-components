@@ -6,21 +6,24 @@ import Translations from './Translations';
 export default { title: 'Translations' };
 
 export const VeryBasic = () => {
-	const temp = { 'Hello, World!': { 'af-ZA': 'G, W!' } };
+	const temp = { 'Hello, World!': { 'en-ZA': 'Howzit!' } };
 	return (
-		<Translations templates={temp} culture="af-ZA">
+		<Translations templates={temp} culture="en-ZA">
 			<p>{i18n`Hello, World!`}</p>
 		</Translations>
 	);
 }
 
-// export const WithVariables = () => {
-// 	const name = 'Jack';
-//   const [number, setNumber] = useState(0);
-//   return (
-//     <div>
-//       <p>{i18n`Hello, ${name}. The number is ${number}.`}</p>
-//       <button type="button" onClick={() => setNumber(number + 1)}>+</button>
-//     </div>
-//   );
-// }
+export const WithVariables = () => {
+	const name = 'Jack';
+	const [number, setNumber] = useState(0);
+	const temp = { 'Hello, {0}. The number is {1}.': { 'en-ZA': 'The number is {1}, hey {0}.' } };
+  return (
+		<Translations templates={temp} culture="en-ZA">
+    <div>
+      <p>{i18n`Hello, ${name}. The number is ${number}.`}</p>
+      <button type="button" onClick={() => setNumber(number + 1)}>+</button>
+    </div>
+		</Translations>
+  );
+}
