@@ -6,6 +6,7 @@ type Props = { culture?: string, templates: TranslationTemplates };
 
 const Translations: FC<Props> = ({children, culture: setCulture, templates}) => 
 {
+	debugger;
 	const culture = setCulture ?? navigator.language;
 	const value = {culture, templates};
 	return (

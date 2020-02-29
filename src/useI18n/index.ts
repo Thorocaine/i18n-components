@@ -14,7 +14,7 @@ function useI18n(strings : TemplateStringsArray, ...args: unknown[])
 		const currentValue = strings.slice(1).reduce((p, c, i) => `${p}{${i}}${c}`, strings[0]);
 		const currentTemplate = templates[currentValue] ?? currentValue;
 		const currentLang: string = currentTemplate[culture] ?? currentTemplate[language] ?? currentValue;
-		const translation = args.reduce((c, p, i) => c.split(`{${i}}`).join(p as string), currentLang);
+		const translation = args.reduce((c: string, p, i) => c.split(`{${i}}`).join(p as string), currentLang);
 		return translation;
 	}, [strings, templates, culture, args])
 

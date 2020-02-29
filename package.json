@@ -16,7 +16,7 @@
 	},
 	"scripts": {
 		"storybook": "start-storybook",
-		"build": "",
+		"build": "tsc",
 		"test": "react-scripts test"
 	},
 	"eslintConfig": {

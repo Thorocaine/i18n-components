@@ -1,22 +1,19 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import context from '../context';
 import i18n from '../i18n';
 import Translations from '../Translations';
 
-export default { title: 'useI18n' };
+export default { title: 'Assume the culture' };
 
 const temp =
 {
-	'Hello, World!': { 'en-ZA': 'Howzit!' }
+	'Hello, World!': { 'en-ZA': 'Howzit!', 'en-US': 'Yo, Yo, Yo!' }
 };
 
 export const VeryBasic = () => 
 {
-	const {culture} = useContext(context);
 	return (
 		<Translations templates={temp}>
-			<h3>The culture is <em>{culture}</em></h3>
 			<p>{i18n`Hello, World!`}</p>
 		</Translations>
 	);
