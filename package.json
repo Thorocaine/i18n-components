@@ -3,12 +3,14 @@
 	"version": "1.0.0",
 	"description": "I want to try make an easy to use i18n components for react, using tagged template literals.",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"devDependencies": {
 		"@storybook/react": "^5.3.14",
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.4.1",
 		"@testing-library/user-event": "^7.2.1",
 		"react-scripts": "^3.4.0",
+		"rimraf": "^3.0.2",
 		"typescript": "^3.8.2"
 	},
 	"peerDependencies": {
@@ -16,12 +18,19 @@
 	},
 	"scripts": {
 		"storybook": "start-storybook",
-		"build": "tsc",
+		"build": "rimraf dist && tsc",
 		"test": "react-scripts test"
 	},
 	"eslintConfig": {
-		"extends": "react-app", "rules": {
-			"brace-style": [2, "allman", { "allowSingleLine": true }]
+		"extends": "react-app",
+		"rules": {
+			"brace-style": [
+				2,
+				"allman",
+				{
+					"allowSingleLine": true
+				}
+			]
 		}
 	},
 	"browserslist": {
@@ -49,5 +58,6 @@
 	"bugs": {
 		"url": "https://github.com/Thorocaine/i18n-components/issues"
 	},
-	"homepage": "https://github.com/Thorocaine/i18n-components#readme"
+	"homepage": "https://github.com/Thorocaine/i18n-components#readme",
+	"files": ["dist"]
 }
