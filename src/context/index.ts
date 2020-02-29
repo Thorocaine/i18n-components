@@ -1,10 +1,12 @@
 import { createContext } from 'react';
 
-type TranslationTemplates = {
+export type TranslationTemplates = 
+{
 	[template: string]: { [lang: string]: string }
 };
 
-export type TranslationContext = {
+type TranslationContext = 
+{
 	templates: TranslationTemplates,
 	culture: string,
 } 

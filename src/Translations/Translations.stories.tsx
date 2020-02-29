@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-import i18n from './i18n';
-import Translations from './Translations';
+import Translations from '.';
+import i18n from '../i18n';
 
 export default { title: 'Translations' };
 
-export const VeryBasic = () => {
+export const VeryBasic = () => 
+{
 	const temp = { 'Hello, World!': { 'en-ZA': 'Howzit!' } };
 	return (
 		<Translations templates={temp} culture="en-ZA">
@@ -14,7 +15,8 @@ export const VeryBasic = () => {
 	);
 }
 
-export const WithVariables = () => {
+export const WithVariables = () => 
+{
 	const name = 'Jack';
 	const [number, setNumber] = useState(0);
 	const temp = { 'Hello, {0}. The number is {1}.': { 'en-ZA': 'The number is {1}, hey {0}.' } };
