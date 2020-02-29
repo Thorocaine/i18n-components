@@ -19,7 +19,7 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "rimraf dist && tsc",
-		"test": "react-scripts test"
+		"test": "react-scripts test",
 	},
 	"eslintConfig": {
 		"extends": "react-app",
