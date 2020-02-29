@@ -1,6 +1,6 @@
 {
 	"name": "i18n-components",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "I want to try make an easy to use i18n components for react, using tagged template literals.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -50,8 +50,15 @@
 		"url": "git+https://github.com/Thorocaine/i18n-components.git"
 	},
 	"keywords": [
+		"react",
+		"format",
+		"globalization",
 		"i18n",
-		"react"
+		"internationalization",
+		"localization",
+		"translation",
+		"typed",
+		"typescript"
 	],
 	"author": "Jonathan Peel",
 	"license": "MIT",
