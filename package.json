@@ -1,6 +1,6 @@
 {
 	"name": "i18n-components",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "I want to try make an easy to use i18n components for react, using tagged template literals.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -25,11 +25,11 @@
 		"lint": "eslint src/**/*",
 		"format": "npm run lint -- --fix",
 		"---": "---",
-		"prepare" : "npm run build",
-		"prepublishOnly" : "npm test && npm run lint",
-		"preversion" : "npm run lint",
-		"version" : "npm run format && git add -A src",
-		"postversion" : "git push && git push --tags"
+		"prepare": "npm run build",
+		"prepublishOnly": "npm test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run format && git add -A src",
+		"postversion": "git push && git push --tags"
 	},
 	"eslintConfig": {
 		"extends": "react-app",
