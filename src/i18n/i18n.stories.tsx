@@ -6,7 +6,8 @@ export default { title: 'i18n' };
 
 export const VeryBasic = () => <p>{i18n`Hello, World!`}</p>;
 
-export const WithVariables = () => {
+export const WithVariables = () => 
+{
 	const name = 'Jack';
   const [number, setNumber] = useState(0);
   return (
